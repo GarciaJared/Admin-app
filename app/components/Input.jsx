@@ -1,6 +1,5 @@
-import React, {forwardRef} from "react";
-
-const Input = forwardRef(({ name, label, className, type, placeholder }, ref)  => {
+import React from "react";
+const Input = ({ name, label, className, type, placeholder, ref, onChange })  => {
 
   return (
     <div>
@@ -8,6 +7,7 @@ const Input = forwardRef(({ name, label, className, type, placeholder }, ref)  =
         {label}
       </label>
       <input
+        onChange={onChange}
         id={name}
         name={name}
         type={type}
@@ -19,9 +19,8 @@ const Input = forwardRef(({ name, label, className, type, placeholder }, ref)  =
       />
     </div>
   );
-});
+};
 Input.displayName = "Input";
 
 export default Input;
 //rafce
-//appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm
