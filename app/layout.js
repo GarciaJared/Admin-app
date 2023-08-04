@@ -1,7 +1,7 @@
 'use client';
-import Header from './components/Header';
+import Header from '@components/Header';
 import './styles/globals.css';
-import Nav from './common/Nav';
+import Nav from '@common/Nav';
 
 export default function MainLayout({ children }) {
   return (
